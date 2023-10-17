@@ -9,5 +9,5 @@ Team 6647 strongly promotes the use of external libraries made by other teams. D
 ## Authors
 
 * **Marío Casas** - [MaCaDo](https://github.com/MaCaDo1136)
-* **Mauricio Villarreal** - [AndromedaHelix](https://github.com/AndromedaHelix)
-* **Juan Pablo Gutiérrez** - [MauVillarreal2005](https://github.com/MauVillarreal2005)
+* **Mauricio Villarreal** - [MauVillarreal2005](https://github.com/AndromedaHelix)
+* **Juan Pablo Gutiérrez** - [AndromedaHelix](https://github.com/MauVillarreal2005)

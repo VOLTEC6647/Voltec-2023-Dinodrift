@@ -45,6 +45,9 @@ public class RobotContainer extends SuperRobotContainer {
         new NeoAndromedaModule(3, "Front Left", AndromedaMap.mod4Const,
             AndromedaProfileConfig.getConfig(AndromedaProfiles.NEO_CONFIG))
     }, AndromedaProfileConfig.getConfig(AndromedaProfiles.NEO_CONFIG));
+
+    intakeSubsystem = IntakeSubsystem.getInstance();
+    PivotSubsystem = PivotSubsystem.getInstance();
   }
 
   @Override

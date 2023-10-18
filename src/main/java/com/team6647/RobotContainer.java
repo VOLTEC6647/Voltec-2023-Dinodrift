@@ -8,10 +8,12 @@ package com.team6647;
 import com.andromedalib.andromedaSwerve.andromedaModule.NeoAndromedaModule;
 import com.andromedalib.andromedaSwerve.commands.SwerveDriveCommand;
 import com.andromedalib.andromedaSwerve.systems.AndromedaSwerve;
-import com.andromedalib.andromedaSwerve.utils.AndromedaMap;
 import com.andromedalib.andromedaSwerve.utils.AndromedaProfileConfig;
 import com.andromedalib.andromedaSwerve.utils.AndromedaProfileConfig.AndromedaProfiles;
 import com.andromedalib.robot.SuperRobotContainer;
+import com.team6647.subsystems.IntakeSubsystem;
+import com.team6647.subsystems.PivotSubsystem;
+import com.team6647.utils.Constants.DriveConsants;
 import com.team6647.utils.Constants.OperatorConstants;
 
 import edu.wpi.first.wpilibj2.command.Command;
@@ -21,6 +23,8 @@ public class RobotContainer extends SuperRobotContainer {
   private static RobotContainer instance;
 
   private AndromedaSwerve andromedaSwerve;
+  private IntakeSubsystem intakeSubsystem;
+  private PivotSubsystem pivotSubsystem;
 
   private RobotContainer() {
     configureBindings();
@@ -36,18 +40,18 @@ public class RobotContainer extends SuperRobotContainer {
   @Override
   public void initSubsystems() {
     andromedaSwerve = AndromedaSwerve.getInstance(new NeoAndromedaModule[] {
-        new NeoAndromedaModule(0, "Front Right", AndromedaMap.mod1Const,
+        new NeoAndromedaModule(0, "Front Right", DriveConsants.mod1Const,
             AndromedaProfileConfig.getConfig(AndromedaProfiles.NEO_CONFIG)),
-        new NeoAndromedaModule(1, "Back Right", AndromedaMap.mod2Const,
+        new NeoAndromedaModule(1, "Back Right", DriveConsants.mod2Const,
             AndromedaProfileConfig.getConfig(AndromedaProfiles.NEO_CONFIG)),
-        new NeoAndromedaModule(2, "Back Left", AndromedaMap.mod3Const,
+        new NeoAndromedaModule(2, "Back Left", DriveConsants.mod3Const,
             AndromedaProfileConfig.getConfig(AndromedaProfiles.NEO_CONFIG)),
-        new NeoAndromedaModule(3, "Front Left", AndromedaMap.mod4Const,
+        new NeoAndromedaModule(3, "Front Left", DriveConsants.mod4Const,
             AndromedaProfileConfig.getConfig(AndromedaProfiles.NEO_CONFIG))
     }, AndromedaProfileConfig.getConfig(AndromedaProfiles.NEO_CONFIG));
 
     intakeSubsystem = IntakeSubsystem.getInstance();
-    PivotSubsystem = PivotSubsystem.getInstance();
+    pivotSubsystem = PivotSubsystem.getInstance();
   }
 
   @Override

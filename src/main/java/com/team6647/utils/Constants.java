@@ -1,6 +1,12 @@
 package com.team6647.utils;
 
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+
+import com.andromedalib.andromedaSwerve.andromedaModule.AndromedaModule;
+import com.andromedalib.andromedaSwerve.utils.AndromedaMap;
+import com.andromedalib.andromedaSwerve.utils.AndromedaModuleConstants;
+
+import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 
@@ -19,6 +25,13 @@ public class Constants {
         private static final String kShuffleboardTabName = "Team 6647";
         public static final ShuffleboardTab kShuffleboardTab = Shuffleboard.getTab(kShuffleboardTabName);
     }    
+
+    public static class DriveConsants{
+        public static final AndromedaModuleConstants mod1Const = new AndromedaModuleConstants(AndromedaMap.mod1Const.steeringMotorID, AndromedaMap.mod1Const.driveMotorID, AndromedaMap.mod1Const.absCanCoderID, Rotation2d.fromDegrees(202.061));
+        public static final AndromedaModuleConstants mod2Const = new AndromedaModuleConstants(AndromedaMap.mod2Const.steeringMotorID, AndromedaMap.mod2Const.driveMotorID, AndromedaMap.mod2Const.absCanCoderID, Rotation2d.fromDegrees(41.660));
+        public static final AndromedaModuleConstants mod3Const = new AndromedaModuleConstants(AndromedaMap.mod3Const.steeringMotorID, AndromedaMap.mod3Const.driveMotorID, AndromedaMap.mod3Const.absCanCoderID, Rotation2d.fromDegrees(109.688));
+        public static final AndromedaModuleConstants mod4Const = new AndromedaModuleConstants(AndromedaMap.mod4Const.steeringMotorID, AndromedaMap.mod4Const.driveMotorID, AndromedaMap.mod4Const.absCanCoderID, Rotation2d.fromDegrees(53.613));
+    }
 
     public static class PivotConstants {
 

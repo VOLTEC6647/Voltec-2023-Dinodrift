@@ -34,11 +34,11 @@ public class Constants {
         public static final double intakeSpeed = 0.3;
         public static final int beamBrakePort = 2;
 
-        public static final double intakeHomedPosition = 0;
+        public static final double intakeHomedPosition = 150;
         public static final double intakeFloorPosition = 0;
-        public static final double intakeScoreLowPositon = 0;
-        public static final double intakeScoreMidPositon = 0;
-        public static final double intakeScoreHighPositon = 0;
+        public static final double intakeScoreLowPositon = 90;
+        public static final double intakeScoreMidPositon = 110;
+        public static final double intakeScoreHighPositon = 130;
 
         public static final double armEncoderPositionConversionFactor = 360;
         public static final double armEncoderZeroOffset = 150.982;
@@ -53,7 +53,10 @@ public class Constants {
         public static final double pivotPositionConversionFactor = 100;
         public static final double pivotZeroOffset = 90.0467753;
 
-        public static final double intakeSpeed = 0.7;
+        public static final double intakeBaseSpeed = 0.7;
+        public static final double intakeScoreLowSpeed = 0.2;
+        public static final double intakeScoreMidSpeed = 0.5;
+        public static final double intakeScoreLowSpeed = 1;
 
         public static final int beamBrakePort = 0;
     }

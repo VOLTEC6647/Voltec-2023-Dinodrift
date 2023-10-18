@@ -36,7 +36,7 @@ public class IntakeSubsystem extends SubsystemBase{
     }
 
     public enum RollerState{
-        STOPPED, COLLECTING, SPITTING
+        STOPPED, COLLECTING, SPITTING, SCORELOW, SCOREMID, SCOREHIGH
     }
 
     @Override
@@ -59,8 +59,13 @@ public class IntakeSubsystem extends SubsystemBase{
                 setIntakeSpeed(IntakeConstants.intakeSpeed);
                 break;
             case SPITTING:
-                setIntakeSpeed(-IntakeConstants.intakeSpeed);
+                setIntakeSpeed(-IntakeConstants.intakeBaseSpeed);
                 break;
+            case SCORELOW:
+                setIntakeSpeed(IntakeConstants.intakeScoreLowSpeed);
+                break;
+            case SCOREMID:
+            setIntakeSpeed(IntakeConstants.intakeScoreMidSpeed);
         }
     }
 

@@ -1,4 +1,4 @@
-package frc.robot.Subsystems;
+package com.team6647.subsystems;
 
 import com.andromedalib.math.Functions;
 import com.andromedalib.motorControllers.SuperSparkMax;
@@ -13,11 +13,7 @@ import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.networktables.StringEntry;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
-
 import com.team6647.utils.Constants.PivotConstants;
-
-
 
 public class PivotSubsystem extends SubsystemBase {
 
@@ -33,7 +29,7 @@ public class PivotSubsystem extends SubsystemBase {
       PivotConstants.armEncoderInverted);
 
     private ProfiledPIDController pivController = new ProfiledPIDController(PivotConstants.pivotKp,
-      PivotConstants.pivotKi, PivotConstants.pivotKd, new TrapezoidProfile.Constraints(700, 700)); 
+      PivotConstants.pivotKi, PivotConstants.pivotKd, new TrapezoidProfile.Constraints(2, 2)); 
       
     private AbsoluteEncoder pivEncoder;
 

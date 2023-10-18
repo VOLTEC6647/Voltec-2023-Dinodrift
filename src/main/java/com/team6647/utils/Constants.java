@@ -20,14 +20,12 @@ public class Constants {
         public static final ShuffleboardTab kShuffleboardTab = Shuffleboard.getTab(kShuffleboardTabName);
     }    
 
-
-
     public static class PivotConstants {
 
         public static final int pivMotorID = 9;
         public static final int intakeMotorID = 10;
 
-        public static final double pivotKp = 0; 
+        public static final double pivotKp = 0.2; 
         public static final double pivotKi = 0;
         public static final double pivotKd = 0;
 
@@ -56,7 +54,7 @@ public class Constants {
         public static final double intakeBaseSpeed = 0.7;
         public static final double intakeScoreLowSpeed = 0.2;
         public static final double intakeScoreMidSpeed = 0.5;
-        public static final double intakeScoreLowSpeed = 1;
+        public static final double intakeScoreHighSpeed = 1;
 
         public static final int beamBrakePort = 0;
     }

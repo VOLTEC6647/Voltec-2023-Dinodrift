@@ -1,7 +1,7 @@
-package frc.robot.Commands.hybrid;
+package com.team6647.commands.hybrid;
 
-import com.team6647.Subsystems.PivotSubsystem;
-import com.team6647.Subsystems.PivotSubsystem.PivotState;
+import com.team6647.subsystems.PivotSubsystem;
+import com.team6647.subsystems.PivotSubsystem.PivotState;
 
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 

@@ -27,7 +27,6 @@ public class RobotContainer extends SuperRobotContainer {
   private PivotSubsystem pivotSubsystem;
 
   private RobotContainer() {
-    configureBindings();
   }
 
   public static RobotContainer getInstance() {

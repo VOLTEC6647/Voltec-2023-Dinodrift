@@ -3,6 +3,7 @@ package com.team6647.utils;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
 import com.andromedalib.andromedaSwerve.andromedaModule.AndromedaModule;
+import com.andromedalib.andromedaSwerve.andromedaModule.NeoAndromedaModule;
 import com.andromedalib.andromedaSwerve.utils.AndromedaMap;
 import com.andromedalib.andromedaSwerve.utils.AndromedaModuleConstants;
 import com.andromedalib.andromedaSwerve.utils.AndromedaProfileConfig;
@@ -41,7 +42,6 @@ public class Constants {
         /* Base Andromeda Swerve configuration profile */
         public static AndromedaProfileConfig neoAndromedaSwerveConfig(){
 
-        
 
             double wheelDiameter = Units.inchesToMeters(4.0);
 

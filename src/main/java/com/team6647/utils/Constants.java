@@ -39,7 +39,9 @@ public class Constants {
         public static final AndromedaModuleConstants mod4Const = new AndromedaModuleConstants(10, 11, AndromedaMap.mod4Const.absCanCoderID, Rotation2d.fromDegrees(128.144531));
     
         /* Base Andromeda Swerve configuration profile */
-        public static AndromedaProfileConfig neoAndromedaSwerveConfig() 
+        public static AndromedaProfileConfig neoAndromedaSwerveConfig(){
+
+        
 
             double wheelDiameter = Units.inchesToMeters(4.0);
 

@@ -27,6 +27,7 @@ public class RobotContainer extends SuperRobotContainer {
   private PivotSubsystem pivotSubsystem;
 
   private RobotContainer() {
+    configureBindings();
   }
 
   public static RobotContainer getInstance() {
@@ -62,8 +63,61 @@ public class RobotContainer extends SuperRobotContainer {
             () -> OperatorConstants.driverController1.getLeftY(),
             () -> OperatorConstants.driverController1.getRightX(),
             () -> OperatorConstants.driverController1.leftStick().getAsBoolean()));
-  }
 
+    /* PIVOT LOW */
+    OperatorConstants.driverController2.a().whileTrue(Commands.sequence(
+          new MovePivot(PivotSubsystem, PivotState.LOW),
+          Commands.waitSeconds(1)))
+
+      .onFalse(Commands.sequence(
+          new MovePivot(PivotSubsystem, PivotState.HOMED),
+          Commands.waitSeconds(1)));
+
+    /* PIVOT MID */
+    OperatorConstants.driverController2.b().whileTrue(Commands.sequence(
+          new MovePivot(PivotSubsystem, PivotState.MID),
+          Commands.waitSeconds(1)))
+
+      .onFalse(Commands.sequence(
+          new MovePivot(PivotSubsystem, PivotState.HOMED),
+          Commands.waitSeconds(1)));
+    
+    /* PIVOT HIGH */
+    OperatorConstants.driverController2.x().whileTrue(Commands.sequence(
+          new MovePivot(PivotSubsystem, PivotState.HIGH),
+          Commands.waitSeconds(1)))
+
+      .onFalse(Commands.sequence(
+          new MovePivot(PivotSubsystem, PivotState.HOMED),
+          Commands.waitSeconds(1)));
+
+    /* PIVOT COLLECT */
+    OperatorConstants.driverController2.y().whileTrue(Commands.sequence(
+          new MovePivot(PivotSubsystem, PivotState.COLLECT),
+          Commands.waitSeconds(1)))
+      .onFalse(Commands.sequence(
+          new MovePivot(PivotSubsystem, PivotState.HOMED),
+          Commands.waitSeconds(1)));
+
+    /* INTAKE SCORE */
+    OperatorConstants.driverController2.rightTrigger().whileTrue(commands.sequence(
+      switch(getPivState()){
+        case(HOMED):
+          break;
+        case(COLLECT):
+          break;
+        case(HIGH):
+          new ToggleIntake(IntakeSubsystem, IntakeRollerState.SCOREHIGH)
+          break
+        case(MID):
+          new ToggleIntake(IntakeSubsystem, IntakeRollerState.SCOREHIGH)
+          break;
+        case(LOW):
+          new ToggleIntake(IntakeSubsystem, IntakeRollerState.SCORELOW)
+          break;
+      }
+    ))
+  }
   public Command getAutonomousCommand() {
     return Commands.print("No autonomous command configured");
   }

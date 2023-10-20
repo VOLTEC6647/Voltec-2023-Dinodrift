@@ -59,7 +59,6 @@ public class IntakeSubsystem extends SubsystemBase {
             case COLLECTING:
                 setIntakeSpeed(IntakeConstants.intakeBaseSpeed);
                 break;
-
             case SCORELOW:
                 setIntakeSpeed(IntakeConstants.intakeScoreLowSpeed);
                 break;

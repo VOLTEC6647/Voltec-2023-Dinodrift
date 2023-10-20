@@ -136,12 +136,16 @@ public class PivotSubsystem extends SubsystemBase {
     private PivotState getPivState(){
       return mPivState;
     }
-
+    
     public double getPIDVal(){
       return pidVal;
     }
 
     public double getSetpoint(){
       return setpoint;
+    }
+
+    public PivotState getPivState(){
+      return mPivState;
     }
 }

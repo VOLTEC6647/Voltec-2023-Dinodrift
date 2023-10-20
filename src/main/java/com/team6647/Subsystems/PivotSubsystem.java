@@ -1,4 +1,4 @@
-package com.team6647.subsystems;
+package com.team6647.Subsystems;
 
 import com.andromedalib.math.Functions;
 import com.andromedalib.motorControllers.SuperSparkMax;
@@ -143,9 +143,5 @@ public class PivotSubsystem extends SubsystemBase {
 
     public double getSetpoint(){
       return setpoint;
-    }
-
-    public PivotState getPivState(){
-      return mPivState;
     }
 }

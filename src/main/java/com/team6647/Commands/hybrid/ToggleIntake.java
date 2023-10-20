@@ -1,7 +1,7 @@
-package com.team6647.commands.hybrid;
+package com.team6647.Commands.hybrid;
 
-import com.team6647.subsystems.IntakeSubsystem;
-import com.team6647.subsystems.IntakeSubsystem.RollerState;
+import com.team6647.Subsystems.IntakeSubsystem;
+import com.team6647.Subsystems.IntakeSubsystem.RollerState;
 
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 

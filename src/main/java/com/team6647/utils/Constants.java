@@ -38,7 +38,7 @@ public class Constants {
         public static final int pivMotorID = 9;
         public static final int intakeMotorID = 10;
 
-        public static final double pivotKp = 0.2; 
+        public static final double pivotKp = 0.1; 
         public static final double pivotKi = 0;
         public static final double pivotKd = 0;
 

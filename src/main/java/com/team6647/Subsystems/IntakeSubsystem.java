@@ -1,4 +1,4 @@
-package com.team6647.subsystems;
+package com.team6647.Subsystems;
 
 import com.andromedalib.motorControllers.IdleManager.GlobalIdleMode;
 import com.andromedalib.motorControllers.SuperSparkMax;

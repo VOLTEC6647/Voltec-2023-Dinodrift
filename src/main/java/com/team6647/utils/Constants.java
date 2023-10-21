@@ -3,7 +3,6 @@ package com.team6647.utils;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
 import com.andromedalib.andromedaSwerve.andromedaModule.AndromedaModule;
-import com.andromedalib.andromedaSwerve.andromedaModule.FalconAndromedaModule;
 import com.andromedalib.andromedaSwerve.andromedaModule.NeoAndromedaModule;
 import com.andromedalib.andromedaSwerve.utils.AndromedaMap;
 import com.andromedalib.andromedaSwerve.utils.AndromedaModuleConstants;
@@ -35,22 +34,24 @@ public class Constants {
     }
 
     public static class DriveConstants {
+
         public static final AndromedaModuleConstants mod1Const = new AndromedaModuleConstants(1, 2, 3,
-                Rotation2d.fromDegrees(159.521));
+                Rotation2d.fromDegrees(0));
         public static final AndromedaModuleConstants mod2Const = new AndromedaModuleConstants(4, 5, 6,
-                Rotation2d.fromDegrees(137.109));
+                Rotation2d.fromDegrees(0));
         public static final AndromedaModuleConstants mod3Const = new AndromedaModuleConstants(7, 8, 9,
-                Rotation2d.fromDegrees(246.621));
+                Rotation2d.fromDegrees(0));
         public static final AndromedaModuleConstants mod4Const = new AndromedaModuleConstants(10, 11, 12,
-                Rotation2d.fromDegrees(127.881));
+                Rotation2d.fromDegrees(0));
+        
 
         /* Base Andromeda Swerve configuration profile */
         public static AndromedaProfileConfig neoAndromedaSwerveConfig() {
 
             double wheelDiameter = Units.inchesToMeters(4.0);
 
-            double steeringGearRatio = 1 / (360.0 / (((150.0 / 7.0) / 1.0) * 42));
-            double driveGearRatio = 1 / (360.0 / ((6.75 / 1.0) * 2048.0));
+            double steeringGearRatio = ((150.0 / 7.0) / 1.0);
+            double driveGearRatio = (6.75 / 1.0);
 
             double turningKp = 0.007;
             double turningKi = 0.0;

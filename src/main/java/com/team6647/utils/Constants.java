@@ -34,10 +34,10 @@ public class Constants {
     }    
 
     public static class DriveConstants{
-        public static final AndromedaModuleConstants mod1Const = new AndromedaModuleConstants(1, 2, AndromedaMap.mod1Const.absCanCoderID, Rotation2d.fromDegrees(342.158203));
-        public static final AndromedaModuleConstants mod2Const = new AndromedaModuleConstants(4, 5, AndromedaMap.mod2Const.absCanCoderID, Rotation2d.fromDegrees(135.615234));
-        public static final AndromedaModuleConstants mod3Const = new AndromedaModuleConstants(7, 8, AndromedaMap.mod3Const.absCanCoderID, Rotation2d.fromDegrees(248.291016));
-        public static final AndromedaModuleConstants mod4Const = new AndromedaModuleConstants(10, 11, AndromedaMap.mod4Const.absCanCoderID, Rotation2d.fromDegrees(128.144531));
+        public static final AndromedaModuleConstants mod1Const = new AndromedaModuleConstants(1, 2, AndromedaMap.mod1Const.absCanCoderID, Rotation2d.fromDegrees(37754.339844));
+        public static final AndromedaModuleConstants mod2Const = new AndromedaModuleConstants(4, 5, AndromedaMap.mod2Const.absCanCoderID, Rotation2d.fromDegrees(38739.304688));
+        public static final AndromedaModuleConstants mod3Const = new AndromedaModuleConstants(7, 8, AndromedaMap.mod3Const.absCanCoderID, Rotation2d.fromDegrees(43186.054688));
+        public static final AndromedaModuleConstants mod4Const = new AndromedaModuleConstants(10, 11, AndromedaMap.mod4Const.absCanCoderID, Rotation2d.fromDegrees(40688.082031));
     
         /* Base Andromeda Swerve configuration profile */
         public static AndromedaProfileConfig neoAndromedaSwerveConfig(){

@@ -25,11 +25,11 @@ public class PivotSubsystem extends SubsystemBase {
     private static DoubleEntry pivSetpointDoubleEntry;
 
     public static SuperSparkMax pivMotor = new SuperSparkMax(PivotConstants.pivMotorID, GlobalIdleMode.brake,
-      true, 80, PivotConstants.armEncoderPositionConversionFactor, PivotConstants.armEncoderZeroOffset,
+      false, 80, PivotConstants.armEncoderPositionConversionFactor, PivotConstants.armEncoderZeroOffset,
       PivotConstants.armEncoderInverted);
 
     private ProfiledPIDController pivController = new ProfiledPIDController(PivotConstants.pivotKp,
-      PivotConstants.pivotKi, PivotConstants.pivotKd, new TrapezoidProfile.Constraints(2, 2)); 
+      PivotConstants.pivotKi, PivotConstants.pivotKd, new TrapezoidProfile.Constraints(10, 10)); 
       
     private AbsoluteEncoder pivEncoder;
 
@@ -95,15 +95,15 @@ public class PivotSubsystem extends SubsystemBase {
           break;
 
         case LOW:
-          changeSetpoint(PivotConstants.intakeScoreLowPositon);
+          changeSetpoint(PivotConstants.intakeHomedPosition);
           break;
 
         case MID:
-          changeSetpoint(PivotConstants.intakeScoreMidPositon);
+          changeSetpoint(PivotConstants.intakeHomedPosition);
           break;
 
         case HIGH:
-          changeSetpoint(PivotConstants.intakeScoreHighPositon);
+          changeSetpoint(PivotConstants.intakeHomedPosition);
           break;
       }
     }

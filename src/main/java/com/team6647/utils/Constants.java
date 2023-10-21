@@ -36,13 +36,13 @@ public class Constants {
     public static class DriveConstants {
 
         public static final AndromedaModuleConstants mod1Const = new AndromedaModuleConstants(1, 2, 3,
-                Rotation2d.fromDegrees(0));
+                Rotation2d.fromDegrees(90));
         public static final AndromedaModuleConstants mod2Const = new AndromedaModuleConstants(4, 5, 6,
-                Rotation2d.fromDegrees(0));
+                Rotation2d.fromDegrees(90));
         public static final AndromedaModuleConstants mod3Const = new AndromedaModuleConstants(7, 8, 9,
-                Rotation2d.fromDegrees(0));
+                Rotation2d.fromDegrees(90));
         public static final AndromedaModuleConstants mod4Const = new AndromedaModuleConstants(10, 11, 12,
-                Rotation2d.fromDegrees(0));
+                Rotation2d.fromDegrees(90));
         
 
         /* Base Andromeda Swerve configuration profile */
@@ -53,7 +53,7 @@ public class Constants {
             double steeringGearRatio = ((150.0 / 7.0) / 1.0);
             double driveGearRatio = (6.75 / 1.0);
 
-            double turningKp = 0.007;
+            double turningKp = 0.1;
             double turningKi = 0.0;
             double turningKd = 0.0;
             double turningKf = 0.0;
@@ -100,19 +100,19 @@ public class Constants {
 
         public static final int pivMotorID = 20;
 
-        public static final double pivotKp = 0.1;
+        public static final double pivotKp = 0.05;
         public static final double pivotKi = 0;
         public static final double pivotKd = 0;
 
         public static final double intakeSpeed = 0.3;
         public static final int beamBrakePort = 2;
 
-        public static final double intakeHomedPosition = 208.667;
-        public static final double intakeFloorPosition = 337.540;
-        public static final double intakeScoreLowPositon = 277.820;
+        public static final double intakeHomedPosition = 6.369259;
+        public static final double intakeFloorPosition = 100;
+        /* public static final double intakeScoreLowPositon = 277.820;
         public static final double intakeScoreMidPositon = 234.969;
         public static final double intakeScoreHighPositon = 234.969;
-
+ */
         public static final double armEncoderPositionConversionFactor = 360;
         public static final double armEncoderZeroOffset = 150.982;
         public static final boolean armEncoderInverted = false;
@@ -126,9 +126,9 @@ public class Constants {
         public static final double pivotZeroOffset = 90.0467753;
 
         public static final double intakeBaseSpeed = 0.7;
-        public static final double intakeScoreLowSpeed = 0.2;
-        public static final double intakeScoreMidSpeed = 0.5;
-        public static final double intakeScoreHighSpeed = 1;
+        public static final double intakeScoreLowSpeed = -0.2;
+        public static final double intakeScoreMidSpeed = -0.5;
+        public static final double intakeScoreHighSpeed = -1;
 
         public static final int beamBrakePort = 0;
     }

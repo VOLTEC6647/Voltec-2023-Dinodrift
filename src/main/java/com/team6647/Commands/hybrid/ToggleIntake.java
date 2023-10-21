@@ -24,6 +24,5 @@ public class ToggleIntake extends InstantCommand{
 
     @Override
     public void end(boolean interrupted){
-        intakeSubsystem.changeRollerState(RollerState.STOPPED);
     }
 }
